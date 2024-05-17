@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 class CreateUserVM: ObservableObject {
     @Published var username = ""
     @Published var email = ""
