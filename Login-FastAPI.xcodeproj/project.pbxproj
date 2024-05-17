@@ -14,6 +14,14 @@
 		07B8207B2BF7F61900CE0C6A /* Login_FastAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B8207A2BF7F61900CE0C6A /* Login_FastAPITests.swift */; };
 		07B820852BF7F61900CE0C6A /* Login_FastAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B820842BF7F61900CE0C6A /* Login_FastAPIUITests.swift */; };
 		07B820872BF7F61900CE0C6A /* Login_FastAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B820862BF7F61900CE0C6A /* Login_FastAPIUITestsLaunchTests.swift */; };
+		07B820952BF7F63200CE0C6A /* CreateUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B820942BF7F63200CE0C6A /* CreateUserView.swift */; };
+		07B820972BF7F64400CE0C6A /* CreateUserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B820962BF7F64400CE0C6A /* CreateUserVM.swift */; };
+		07B8209B2BF7F6E500CE0C6A /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B8209A2BF7F6E500CE0C6A /* APIEndpoints.swift */; };
+		07B8209D2BF7F6FA00CE0C6A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B8209C2BF7F6FA00CE0C6A /* NetworkManager.swift */; };
+		07B820A02BF7F77800CE0C6A /* CreateUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B8209F2BF7F77800CE0C6A /* CreateUserRequest.swift */; };
+		07B820A22BF7F7DB00CE0C6A /* CreateUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B820A12BF7F7DB00CE0C6A /* CreateUserResponse.swift */; };
+		07B820A42BF7F7EE00CE0C6A /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B820A32BF7F7EE00CE0C6A /* TokenRequest.swift */; };
+		07B820A62BF7F7FD00CE0C6A /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B820A52BF7F7FD00CE0C6A /* TokenResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,14 @@
 		07B820802BF7F61900CE0C6A /* Login-FastAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Login-FastAPIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B820842BF7F61900CE0C6A /* Login_FastAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_FastAPIUITests.swift; sourceTree = "<group>"; };
 		07B820862BF7F61900CE0C6A /* Login_FastAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_FastAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		07B820942BF7F63200CE0C6A /* CreateUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserView.swift; sourceTree = "<group>"; };
+		07B820962BF7F64400CE0C6A /* CreateUserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserVM.swift; sourceTree = "<group>"; };
+		07B8209A2BF7F6E500CE0C6A /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		07B8209C2BF7F6FA00CE0C6A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		07B8209F2BF7F77800CE0C6A /* CreateUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserRequest.swift; sourceTree = "<group>"; };
+		07B820A12BF7F7DB00CE0C6A /* CreateUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserResponse.swift; sourceTree = "<group>"; };
+		07B820A32BF7F7EE00CE0C6A /* TokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRequest.swift; sourceTree = "<group>"; };
+		07B820A52BF7F7FD00CE0C6A /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +110,12 @@
 		07B820682BF7F61700CE0C6A /* Login-FastAPI */ = {
 			isa = PBXGroup;
 			children = (
+				07B8209E2BF7F75400CE0C6A /* Model */,
+				07B820932BF7F62500CE0C6A /* Create User */,
 				07B820692BF7F61700CE0C6A /* Login_FastAPIApp.swift */,
 				07B8206B2BF7F61700CE0C6A /* ContentView.swift */,
+				07B8209A2BF7F6E500CE0C6A /* APIEndpoints.swift */,
+				07B8209C2BF7F6FA00CE0C6A /* NetworkManager.swift */,
 				07B8206D2BF7F61800CE0C6A /* Assets.xcassets */,
 				07B8206F2BF7F61800CE0C6A /* Preview Content */,
 			);
@@ -125,6 +145,26 @@
 				07B820862BF7F61900CE0C6A /* Login_FastAPIUITestsLaunchTests.swift */,
 			);
 			path = "Login-FastAPIUITests";
+			sourceTree = "<group>";
+		};
+		07B820932BF7F62500CE0C6A /* Create User */ = {
+			isa = PBXGroup;
+			children = (
+				07B820942BF7F63200CE0C6A /* CreateUserView.swift */,
+				07B820962BF7F64400CE0C6A /* CreateUserVM.swift */,
+			);
+			path = "Create User";
+			sourceTree = "<group>";
+		};
+		07B8209E2BF7F75400CE0C6A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07B8209F2BF7F77800CE0C6A /* CreateUserRequest.swift */,
+				07B820A12BF7F7DB00CE0C6A /* CreateUserResponse.swift */,
+				07B820A32BF7F7EE00CE0C6A /* TokenRequest.swift */,
+				07B820A52BF7F7FD00CE0C6A /* TokenResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +297,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B8209D2BF7F6FA00CE0C6A /* NetworkManager.swift in Sources */,
+				07B8209B2BF7F6E500CE0C6A /* APIEndpoints.swift in Sources */,
 				07B8206C2BF7F61700CE0C6A /* ContentView.swift in Sources */,
+				07B820952BF7F63200CE0C6A /* CreateUserView.swift in Sources */,
+				07B820A62BF7F7FD00CE0C6A /* TokenResponse.swift in Sources */,
 				07B8206A2BF7F61700CE0C6A /* Login_FastAPIApp.swift in Sources */,
+				07B820A42BF7F7EE00CE0C6A /* TokenRequest.swift in Sources */,
+				07B820A22BF7F7DB00CE0C6A /* CreateUserResponse.swift in Sources */,
+				07B820972BF7F64400CE0C6A /* CreateUserVM.swift in Sources */,
+				07B820A02BF7F77800CE0C6A /* CreateUserRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
