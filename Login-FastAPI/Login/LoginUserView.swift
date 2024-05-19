@@ -1,17 +1,10 @@
-//
-//  CreateUserView.swift
-//  Login-FastAPI
-//
-//  Created by Carlos on 5/17/24.
-//
-
-
 import SwiftUI
 
 struct LoginUserView: View {
     @StateObject var loginVM = LoginUserVM()
-        
-        var body: some View {
+    
+    var body: some View {
+        NavigationStack {
             VStack {
                 Text("Login")
                     .fontWeight(.bold)
@@ -20,15 +13,15 @@ struct LoginUserView: View {
                 
                 Spacer()
                 
-                // TextField to get user email
-                TextField("Enter username", text: $loginVM.username)
+                // TextField to get user username
+                TextField("Enter Username", text: $loginVM.username)
                     .autocapitalization(.none)
                     .padding()
                     .background(Color(UIColor.systemGray6))
                     .cornerRadius(8.0)
                     .padding(.horizontal)
                 
-                // TextField to get and hide password
+                // SecureField to get and hide password
                 SecureField("Enter Password", text: $loginVM.password)
                     .autocapitalization(.none)
                     .padding()
@@ -38,7 +31,7 @@ struct LoginUserView: View {
                 
                 // Login button with action
                 Button(action: {
-                    loginVM.login_user(request: TokenRequest(username: loginVM.username, password: loginVM.password) )
+                    loginVM.login_user(request: TokenRequest(username: loginVM.username, password: loginVM.password))
                 }) {
                     // Login button text
                     Text("Login")
@@ -55,9 +48,12 @@ struct LoginUserView: View {
                 Spacer()
             }
             .ignoresSafeArea(.keyboard)
-            .background(NavigationLink(destination: WelcomeView, label: <#T##() -> View#>))
+            .navigationDestination(isPresented: $loginVM.isLoggedIn) {
+                HomePageView(accessToken: loginVM.accessToken)
+            }
         }
     }
+}
 
 #Preview {
     LoginUserView(loginVM: LoginUserVM())
