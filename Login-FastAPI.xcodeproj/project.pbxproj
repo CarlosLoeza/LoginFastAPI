@@ -26,6 +26,10 @@
 		BF5465C62BFA6F58009D57CE /* LoginUserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5465C52BFA6F58009D57CE /* LoginUserVM.swift */; };
 		BF5465C92BFA7491009D57CE /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5465C82BFA7491009D57CE /* HomePageView.swift */; };
 		BF5465CB2BFA749F009D57CE /* HomePageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5465CA2BFA749F009D57CE /* HomePageVM.swift */; };
+		BF5465CE2BFA9356009D57CE /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5465CD2BFA9356009D57CE /* NavBarView.swift */; };
+		BF5465D12BFA965C009D57CE /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5465D02BFA965C009D57CE /* CameraView.swift */; };
+		BF5465D42BFA9906009D57CE /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5465D32BFA9906009D57CE /* ImageItem.swift */; };
+		BF5465D62BFA9926009D57CE /* ImageFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5465D52BFA9926009D57CE /* ImageFeedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,11 @@
 		BF5465C52BFA6F58009D57CE /* LoginUserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserVM.swift; sourceTree = "<group>"; };
 		BF5465C82BFA7491009D57CE /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		BF5465CA2BFA749F009D57CE /* HomePageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVM.swift; sourceTree = "<group>"; };
+		BF5465CD2BFA9356009D57CE /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
+		BF5465D02BFA965C009D57CE /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		BF5465D22BFA9785009D57CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BF5465D32BFA9906009D57CE /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
+		BF5465D52BFA9926009D57CE /* ImageFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFeedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +127,9 @@
 		07B820682BF7F61700CE0C6A /* Login-FastAPI */ = {
 			isa = PBXGroup;
 			children = (
+				BF5465D22BFA9785009D57CE /* Info.plist */,
+				BF5465CF2BFA964E009D57CE /* Camera */,
+				BF5465CC2BFA9328009D57CE /* NavBar */,
 				BF5465C72BFA747D009D57CE /* Home */,
 				BF5465BE2BFA6C8E009D57CE /* Login */,
 				07B8209E2BF7F75400CE0C6A /* Model */,
@@ -173,6 +185,7 @@
 				07B820A12BF7F7DB00CE0C6A /* CreateUserResponse.swift */,
 				07B820A32BF7F7EE00CE0C6A /* TokenRequest.swift */,
 				07B820A52BF7F7FD00CE0C6A /* TokenResponse.swift */,
+				BF5465D32BFA9906009D57CE /* ImageItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,8 +204,25 @@
 			children = (
 				BF5465C82BFA7491009D57CE /* HomePageView.swift */,
 				BF5465CA2BFA749F009D57CE /* HomePageVM.swift */,
+				BF5465D52BFA9926009D57CE /* ImageFeedView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		BF5465CC2BFA9328009D57CE /* NavBar */ = {
+			isa = PBXGroup;
+			children = (
+				BF5465CD2BFA9356009D57CE /* NavBarView.swift */,
+			);
+			path = NavBar;
+			sourceTree = "<group>";
+		};
+		BF5465CF2BFA964E009D57CE /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				BF5465D02BFA965C009D57CE /* CameraView.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,7 +355,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5465D42BFA9906009D57CE /* ImageItem.swift in Sources */,
 				07B8209D2BF7F6FA00CE0C6A /* NetworkManager.swift in Sources */,
+				BF5465D62BFA9926009D57CE /* ImageFeedView.swift in Sources */,
 				BF5465C92BFA7491009D57CE /* HomePageView.swift in Sources */,
 				BF5465CB2BFA749F009D57CE /* HomePageVM.swift in Sources */,
 				07B8209B2BF7F6E500CE0C6A /* APIEndpoints.swift in Sources */,
@@ -338,7 +370,9 @@
 				07B820A22BF7F7DB00CE0C6A /* CreateUserResponse.swift in Sources */,
 				BF5465C42BFA6F4C009D57CE /* LoginUserView.swift in Sources */,
 				07B820972BF7F64400CE0C6A /* CreateUserVM.swift in Sources */,
+				BF5465CE2BFA9356009D57CE /* NavBarView.swift in Sources */,
 				07B820A02BF7F77800CE0C6A /* CreateUserRequest.swift in Sources */,
+				BF5465D12BFA965C009D57CE /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,10 +539,11 @@
 				DEVELOPMENT_TEAM = LU9JQGZ2LB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Login-FastAPI/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "To take photos of menus and dishes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -534,10 +569,11 @@
 				DEVELOPMENT_TEAM = LU9JQGZ2LB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Login-FastAPI/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "To take photos of menus and dishes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

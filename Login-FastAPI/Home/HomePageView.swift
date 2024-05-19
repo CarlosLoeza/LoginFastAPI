@@ -5,17 +5,11 @@ struct HomePageView: View {
     
     var body: some View {
         VStack {
-            Text("Welcome!")
-                .font(.largeTitle)
-                .padding()
-            Text("Access Token:")
-                .font(.title2)
-                .padding()
-            Text(accessToken)
-                .padding()
-            Spacer()
+            ImageFeedView()
+            BottomNavBar()
         }
         .navigationBarTitle("Welcome", displayMode: .inline)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
