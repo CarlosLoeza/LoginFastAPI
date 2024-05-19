@@ -55,32 +55,34 @@ class NetworkManager {
             }
         }.resume()
         
-        func getToken(request: TokenRequest, completion: @escaping (Result<TokenResponse, Error>) -> Void){
-            guard let url = URL(string: APIEndpoints.token) else {return}
+    }
+        
+    func getToken(request: TokenRequest, completion: @escaping (Result<TokenResponse, Error>) -> Void){
+        guard let url = URL(string: APIEndpoints.token) else {return}
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        urlRequest.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        
+        let bodyString = "username=\(request.username)&password=\(request.password)"
+        urlRequest.httpBody = bodyString.data(using: .utf8)
+        
+        URLSession.shared.dataTask(with: urlRequest) {data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
             
-            var urlRequest = URLRequest(url: url)
-            urlRequest.httpMethod = "POST"
-            urlRequest.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            guard let data = data else {return}
             
-            let bodyString = "username=\(request.username)&password=\(request.password)"
-            urlRequest.httpBody = bodyString.data(using: .utf8)
-            
-            URLSession.shared.dataTask(with: urlRequest) {data, response, error in
-                if let error = error {
-                    completion(.failure(error))
-                    return
-                }
-                
-                guard let data = data else {return}
-                
-                do {
-                    let responseModel = try JSONDecoder().decode(TokenResponse.self, from: data)
-                    completion(.success(responseModel))
-                } catch {
-                    completion(.failure(error))
-                }
-            }.resume()
-        }
+            do {
+                let responseModel = try JSONDecoder().decode(TokenResponse.self, from: data)
+                completion(.success(responseModel))
+            } catch {
+                completion(.failure(error))
+            }
+        }.resume()
     }
 }
+
 

@@ -22,6 +22,10 @@
 		07B820A22BF7F7DB00CE0C6A /* CreateUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B820A12BF7F7DB00CE0C6A /* CreateUserResponse.swift */; };
 		07B820A42BF7F7EE00CE0C6A /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B820A32BF7F7EE00CE0C6A /* TokenRequest.swift */; };
 		07B820A62BF7F7FD00CE0C6A /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B820A52BF7F7FD00CE0C6A /* TokenResponse.swift */; };
+		BF5465C42BFA6F4C009D57CE /* LoginUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5465C32BFA6F4C009D57CE /* LoginUserView.swift */; };
+		BF5465C62BFA6F58009D57CE /* LoginUserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5465C52BFA6F58009D57CE /* LoginUserVM.swift */; };
+		BF5465C92BFA7491009D57CE /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5465C82BFA7491009D57CE /* HomePageView.swift */; };
+		BF5465CB2BFA749F009D57CE /* HomePageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5465CA2BFA749F009D57CE /* HomePageVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		07B820A12BF7F7DB00CE0C6A /* CreateUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserResponse.swift; sourceTree = "<group>"; };
 		07B820A32BF7F7EE00CE0C6A /* TokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRequest.swift; sourceTree = "<group>"; };
 		07B820A52BF7F7FD00CE0C6A /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
+		BF5465C32BFA6F4C009D57CE /* LoginUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserView.swift; sourceTree = "<group>"; };
+		BF5465C52BFA6F58009D57CE /* LoginUserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserVM.swift; sourceTree = "<group>"; };
+		BF5465C82BFA7491009D57CE /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		BF5465CA2BFA749F009D57CE /* HomePageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,8 @@
 		07B820682BF7F61700CE0C6A /* Login-FastAPI */ = {
 			isa = PBXGroup;
 			children = (
+				BF5465C72BFA747D009D57CE /* Home */,
+				BF5465BE2BFA6C8E009D57CE /* Login */,
 				07B8209E2BF7F75400CE0C6A /* Model */,
 				07B820932BF7F62500CE0C6A /* Create User */,
 				07B820692BF7F61700CE0C6A /* Login_FastAPIApp.swift */,
@@ -165,6 +175,24 @@
 				07B820A52BF7F7FD00CE0C6A /* TokenResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BF5465BE2BFA6C8E009D57CE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BF5465C32BFA6F4C009D57CE /* LoginUserView.swift */,
+				BF5465C52BFA6F58009D57CE /* LoginUserVM.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BF5465C72BFA747D009D57CE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BF5465C82BFA7491009D57CE /* HomePageView.swift */,
+				BF5465CA2BFA749F009D57CE /* HomePageVM.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,13 +326,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				07B8209D2BF7F6FA00CE0C6A /* NetworkManager.swift in Sources */,
+				BF5465C92BFA7491009D57CE /* HomePageView.swift in Sources */,
+				BF5465CB2BFA749F009D57CE /* HomePageVM.swift in Sources */,
 				07B8209B2BF7F6E500CE0C6A /* APIEndpoints.swift in Sources */,
 				07B8206C2BF7F61700CE0C6A /* ContentView.swift in Sources */,
 				07B820952BF7F63200CE0C6A /* CreateUserView.swift in Sources */,
 				07B820A62BF7F7FD00CE0C6A /* TokenResponse.swift in Sources */,
 				07B8206A2BF7F61700CE0C6A /* Login_FastAPIApp.swift in Sources */,
 				07B820A42BF7F7EE00CE0C6A /* TokenRequest.swift in Sources */,
+				BF5465C62BFA6F58009D57CE /* LoginUserVM.swift in Sources */,
 				07B820A22BF7F7DB00CE0C6A /* CreateUserResponse.swift in Sources */,
+				BF5465C42BFA6F4C009D57CE /* LoginUserView.swift in Sources */,
 				07B820972BF7F64400CE0C6A /* CreateUserVM.swift in Sources */,
 				07B820A02BF7F77800CE0C6A /* CreateUserRequest.swift in Sources */,
 			);
@@ -470,7 +502,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Login-FastAPI/Preview Content\"";
-				DEVELOPMENT_TEAM = C3353ZR648;
+				DEVELOPMENT_TEAM = LU9JQGZ2LB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -483,7 +515,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "c-lo.Login-FastAPI";
+				PRODUCT_BUNDLE_IDENTIFIER = theeducationappnhall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -499,7 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Login-FastAPI/Preview Content\"";
-				DEVELOPMENT_TEAM = C3353ZR648;
+				DEVELOPMENT_TEAM = LU9JQGZ2LB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -512,7 +544,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "c-lo.Login-FastAPI";
+				PRODUCT_BUNDLE_IDENTIFIER = theeducationappnhall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
