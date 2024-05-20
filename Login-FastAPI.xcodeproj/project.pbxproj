@@ -22,6 +22,7 @@
 		07B820A22BF7F7DB00CE0C6A /* CreateUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B820A12BF7F7DB00CE0C6A /* CreateUserResponse.swift */; };
 		07B820A42BF7F7EE00CE0C6A /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B820A32BF7F7EE00CE0C6A /* TokenRequest.swift */; };
 		07B820A62BF7F7FD00CE0C6A /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B820A52BF7F7FD00CE0C6A /* TokenResponse.swift */; };
+		07B820E82BFBCD4A00CE0C6A /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B820E72BFBCD4A00CE0C6A /* DismissKeyboard.swift */; };
 		BF5465C42BFA6F4C009D57CE /* LoginUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5465C32BFA6F4C009D57CE /* LoginUserView.swift */; };
 		BF5465C62BFA6F58009D57CE /* LoginUserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5465C52BFA6F58009D57CE /* LoginUserVM.swift */; };
 		BF5465C92BFA7491009D57CE /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5465C82BFA7491009D57CE /* HomePageView.swift */; };
@@ -68,6 +69,7 @@
 		07B820A12BF7F7DB00CE0C6A /* CreateUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserResponse.swift; sourceTree = "<group>"; };
 		07B820A32BF7F7EE00CE0C6A /* TokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRequest.swift; sourceTree = "<group>"; };
 		07B820A52BF7F7FD00CE0C6A /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
+		07B820E72BFBCD4A00CE0C6A /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
 		BF5465C32BFA6F4C009D57CE /* LoginUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserView.swift; sourceTree = "<group>"; };
 		BF5465C52BFA6F58009D57CE /* LoginUserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserVM.swift; sourceTree = "<group>"; };
 		BF5465C82BFA7491009D57CE /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
@@ -132,12 +134,13 @@
 				BF5465CC2BFA9328009D57CE /* NavBar */,
 				BF5465C72BFA747D009D57CE /* Home */,
 				BF5465BE2BFA6C8E009D57CE /* Login */,
-				07B8209E2BF7F75400CE0C6A /* Model */,
 				07B820932BF7F62500CE0C6A /* Create User */,
-				07B820692BF7F61700CE0C6A /* Login_FastAPIApp.swift */,
+				07B8209E2BF7F75400CE0C6A /* Model */,
 				07B8206B2BF7F61700CE0C6A /* ContentView.swift */,
+				07B820692BF7F61700CE0C6A /* Login_FastAPIApp.swift */,
 				07B8209A2BF7F6E500CE0C6A /* APIEndpoints.swift */,
 				07B8209C2BF7F6FA00CE0C6A /* NetworkManager.swift */,
+				07B820E72BFBCD4A00CE0C6A /* DismissKeyboard.swift */,
 				07B8206D2BF7F61800CE0C6A /* Assets.xcassets */,
 				07B8206F2BF7F61800CE0C6A /* Preview Content */,
 			);
@@ -359,6 +362,7 @@
 				07B8209D2BF7F6FA00CE0C6A /* NetworkManager.swift in Sources */,
 				BF5465D62BFA9926009D57CE /* ImageFeedView.swift in Sources */,
 				BF5465C92BFA7491009D57CE /* HomePageView.swift in Sources */,
+				07B820E82BFBCD4A00CE0C6A /* DismissKeyboard.swift in Sources */,
 				BF5465CB2BFA749F009D57CE /* HomePageVM.swift in Sources */,
 				07B8209B2BF7F6E500CE0C6A /* APIEndpoints.swift in Sources */,
 				07B8206C2BF7F61700CE0C6A /* ContentView.swift in Sources */,
@@ -536,7 +540,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Login-FastAPI/Preview Content\"";
-				DEVELOPMENT_TEAM = LU9JQGZ2LB;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Login-FastAPI/Info.plist";
@@ -566,7 +570,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Login-FastAPI/Preview Content\"";
-				DEVELOPMENT_TEAM = LU9JQGZ2LB;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Login-FastAPI/Info.plist";

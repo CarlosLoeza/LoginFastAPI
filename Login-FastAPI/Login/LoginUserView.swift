@@ -43,7 +43,10 @@ struct LoginUserView: View {
                         .cornerRadius(8.0)
                 }
                 .padding()
-                
+                NavigationLink(destination: CreateUserView().navigationBarBackButtonHidden(true)){
+                    Text("Don't have account? Sign up")
+                        
+                }
                 Spacer()
                 Spacer()
             }
@@ -51,6 +54,7 @@ struct LoginUserView: View {
             .navigationDestination(isPresented: $loginVM.isLoggedIn) {
                 HomePageView(accessToken: loginVM.accessToken)
             }
+            .dismissKeyboardOnTap()
         }
     }
 }

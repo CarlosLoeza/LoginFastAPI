@@ -30,6 +30,7 @@ struct BottomNavBar: View {
                         }
                         .fullScreenCover(isPresented: $isCameraPresented) {
                             CameraView()
+                                .ignoresSafeArea(.all)
                         }
             Spacer()
             NavigationLink(destination: HomePageView(accessToken: "Hello")) {
