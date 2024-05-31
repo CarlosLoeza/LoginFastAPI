@@ -43,6 +43,15 @@ struct LoginUserView: View {
                         .cornerRadius(8.0)
                 }
                 .padding()
+                Text("-- OR --")
+                    .foregroundColor(.gray)
+                GoogleSignInButton {
+                    // TODO: - Call the sign method here
+                    FirebAuth.share.signinWithGoogle(presenting: getRootViewController()) { error in
+                        // TODO: Handle ERROR
+                    }
+                }.padding()
+                // GoogleSiginBtn
                 NavigationLink(destination: CreateUserView().navigationBarBackButtonHidden(true)){
                     Text("Don't have account? Sign up")
                         
